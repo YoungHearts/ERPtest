@@ -30,9 +30,6 @@ class Input extends Component {
             viewStyle,//盒子样式
             ...attributes
         } = this.props;
-        // success ? selectionColor = successColor || '#4ECBFC' : selectionColor = '#4ECBFC';
-        // error ? selectionColor = errorColor || 'red' : selectionColor = '#4ECBFC';
-        // alert(status);
         status ? selectionColor = successColor || '#4ECBFC' : selectionColor = errorColor || 'red';
         return (
             <View

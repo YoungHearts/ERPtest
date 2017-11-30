@@ -44,7 +44,7 @@ class Home extends Component {
         }
     };
     _onPress = () => {
-        console.log('点击了Button');
+        this.props.navigation.navigate('Login')
     };
     _usernameJudge = (text) => {
         console.log(text,'onChangeText');
@@ -78,8 +78,8 @@ class Home extends Component {
                     backgroundColor={COLORS.appColor}
                     raised
                     borderRadius={5}
-                    title='按钮组件!'
-                    animationType="bounceInLeft"
+                    title='登录'
+                    animationType="bounceIn"
                     onPress = {this._onPress}
                 />
 
@@ -91,7 +91,7 @@ class Home extends Component {
 
     _toDetail() {
         this.props.navigation.navigate('User')
-    }
+    };
 }
 
 const styles = StyleSheet.create({

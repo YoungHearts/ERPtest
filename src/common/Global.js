@@ -6,13 +6,11 @@ import { Dimensions, StyleSheet, PixelRatio, Platform, Alert } from 'react-nativ
 import FontSize from '../component/TextSize';
 import Colors from '../component/Colors';
 import { px2dp } from './Tool';
+import * as axios from 'axios';
 
-// import * as Fetch from './Fetch';
-
-
-// import ImageResizer from 'react-native-image-resizer';
 
 let {height, width} = Dimensions.get('window');
+let navigation;
 
 // 系统是iOS
 global.iOS = (Platform.OS === 'ios');
@@ -42,6 +40,7 @@ global.Alert = Alert;
 // global.Fetch = Fetch;
 //全局属性
 global.GEM={
-
+    axios,
+    navigation,
 }
 

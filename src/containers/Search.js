@@ -18,6 +18,9 @@ class App extends Component {
     _usernameJudge = (text) => {
         console.log(text,'onChangeText');
     };
+    _usernameInput = (text) => {
+        console.log(text,'_usernameInput');
+    };
     render() {
         return (
             <View>

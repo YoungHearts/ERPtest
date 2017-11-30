@@ -14,7 +14,9 @@ import User from '../containers/User';
 import Search from '../containers/Search';
 import Detail from '../containers/Detail';
 import Detail111 from '../containers/Detail111';
+import Login from '../pages/Login/Login';
 
+const GemIcon = require('../images/GemIcon.png');
 //安卓端需要加上一個headerRight讓title居中
 const headerOptions = {
     headerStyle: { backgroundColor: color.theme },
@@ -25,15 +27,17 @@ const headerOptions = {
 };
 const StackOptions = ({navigation}) => {
     console.log(navigation,'asdasdasdsa');
-}
+};
+
 const MyTab = TabNavigator({
     Home: {
         screen: Home,
+        path:'Home',
         navigationOptions: {
             header:null,
             tabBarLabel: '主页',
             tabBarIcon: ({ tintColor, focused }) => (
-                <Text>🐶</Text>
+                <Text style={{backgroundColor: tintColor}}>🐶</Text>
             ),
         },
     },
@@ -43,7 +47,7 @@ const MyTab = TabNavigator({
             header:null,
             tabBarLabel: '个人中心',
             tabBarIcon: ({ tintColor, focused }) => (
-                <Text>🐔</Text>
+                <Text style={{backgroundColor: tintColor}}>🐔</Text>
             ),
         },
     },
@@ -59,6 +63,7 @@ const Routers = StackNavigator({
     Search: { screen: Search, navigationOptions: { headerTitle: 'Search',header:null, ...headerOptions } },
     Detail: { screen: Detail, navigationOptions: { headerTitle: 'Detail', ...headerOptions } },
     Detail111: { screen: Detail111, navigationOptions: { headerTitle: 'Detail111', ...headerOptions} },
+    Login: { screen: Login, navigationOptions: { headerTitle: '登录', ...headerOptions} },
 }, {
     headerMode: 'screen',
     initialRouteName:'MyTab',
